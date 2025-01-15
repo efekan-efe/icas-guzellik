@@ -42,22 +42,22 @@
           <h3 class="sectionSubTitle">WHO WE ARE</h3>
           <h2 class="sectionMainTitle">Because beauty is the reflection of an attitude.</h2>
           <p class="sectionDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-          <div class="whoWeAreIconRows">
-            <div class="whoWeAreIconRow">
-              <div class="whoWeAreIconContent">
+          <div class="sectionIconRows">
+            <div class="sectionIconRow">
+              <div class="sectionIconContent">
                 <img width="42" height="42" src="/images/diamond_icon.png" alt="diamond_icon" class="whoWeAreIcon" />
               </div>
-              <div class="whoWeAreIconInfoCol">
-                <h3 class="whoWeAreIconTitle">Professional Service</h3>
+              <div class="sectionIconInfoCol">
+                <h3 class="sectionIconTitle">Professional Service</h3>
                 <p class="sectionDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
               </div>
             </div>
-            <div class="whoWeAreIconRow">
-              <div class="whoWeAreIconContent">
+            <div class="sectionIconRow">
+              <div class="sectionIconContent">
                 <img width="42" height="42" src="/images/certificate_icon.png" alt="certificate_icon" class="whoWeAreIcon" />
               </div>
-              <div class="whoWeAreIconInfoCol">
-                <h3 class="whoWeAreIconTitle">Certified Expert</h3>
+              <div class="sectionIconInfoCol">
+                <h3 class="sectionIconTitle">Certified Expert</h3>
                 <p class="sectionDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
               </div>
             </div>
@@ -69,5 +69,109 @@
         </div>
       </div>
     </section>
+
+    <!-- Video Section -->
+
+    <section class="videoWrapper">
+      <div class="videoContent">
+        <div class="videoInfoContent">
+          <h2 class="sectionMainTitle">Beauty is like being comfortable in your skin.</h2>
+          <p class="sectionDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+          <button class="play-btn">
+            <img width="42" height="42" src="/images/play.png" alt="play" class="playBtnImg" />
+          </button>
+          <div class="overlay" id="overlay">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <div class="popup">
+              <iframe id="videoFrame" src="https://www.youtube.com/embed/LXb3EKWsInQ?enablejsapi=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+
+    <section class="whyChooseUsWrapper">
+      <div class="whyChooseUsContent">
+        <div class="whyChooseUsImgSide">
+          <div class="whyChooseUsImgContent">
+            <img class="whyChooseUsImg" width="620" height="650" src="/images/why_choose_us_side_image.jpg" alt="why_choose_us" />
+            <span class="whyChooseUsTagBox">
+              <h2 class="sectionMainTitle">15 +</h2>
+              <p class="sectionDesc">Years Experience</p>
+            </span>
+          </div>
+        </div>
+        <div class="whyChooseUsInfoSide">
+          <div class="whyChooseUsInfoContent">
+            <h3 class="sectionSubTitle">WHY CHOOSE US</h3>
+            <h2 class="sectionMainTitle">Because it feels great in a glowing skin.</h2>
+            <p class="sectionDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <div class="sectionIconRows">
+              <div class="sectionIconRow">
+                <div class="sectionIconContent">
+                  <img width="42" height="42" src="/images/heart_rate_icon.png" alt="diamond_icon" class="whoWeAreIcon" />
+                </div>
+                <div class="sectionIconInfoCol">
+                  <h3 class="sectionIconTitle">Safe Treatments</h3>
+                  <p class="sectionDesc">Rhoncus in aliquet quisque torquent mollis per si metus donec himenaeos elit.</p>
+                </div>
+              </div>
+              <div class="sectionIconRow">
+                <div class="sectionIconContent">
+                  <img width="42" height="42" src="/images/stethoscope_icon.png" alt="certificate_icon" class="whoWeAreIcon" />
+                </div>
+                <div class="sectionIconInfoCol">
+                  <h3 class="sectionIconTitle">Advanced Equipment & Facilities</h3>
+                  <p class="sectionDesc">Rhoncus in aliquet quisque torquent mollis per si metus donec himenaeos elit.</p>
+                </div>
+              </div>
+              <div class="sectionIconRow">
+                <div class="sectionIconContent">
+                  <img width="42" height="42" src="/images/ask_icon.png" alt="certificate_icon" class="whoWeAreIcon" />
+                </div>
+                <div class="sectionIconInfoCol">
+                  <h3 class="sectionIconTitle">24/7 Premium Support</h3>
+                  <p class="sectionDesc">Rhoncus in aliquet quisque torquent mollis per si metus donec himenaeos elit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const playBtn = document.querySelector(".play-btn");
+      const overlay = document.getElementById("overlay");
+      const closeBtn = document.getElementById("closeBtn");
+      const videoFrame = document.getElementById("videoFrame");
+
+      // Show popup when play button is clicked
+      playBtn.addEventListener("click", () => {
+        overlay.style.display = "block";
+      });
+
+      // Function to stop video
+      const stopVideo = () => {
+        videoFrame.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', "*");
+      };
+
+      // Close popup when X button is clicked
+      closeBtn.addEventListener("click", () => {
+        overlay.style.display = "none";
+        stopVideo();
+      });
+
+      // Close popup when clicking outside the video
+      overlay.addEventListener("click", (event) => {
+        if (event.target === overlay) {
+          overlay.style.display = "none";
+          stopVideo();
+        }
+      });
+    </script>
   </body>
 </html>
