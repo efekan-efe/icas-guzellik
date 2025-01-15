@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/** General Styles */
+
+.heroWrapper,
+.whoWeAreWrapper {
+  font-family: "Inter", sans-serif;
+}
+.sectionSubTitle,
+.sectionMainTitle {
+  font-family: "Prata", sans-serif;
+}
+.sectionMainTitle {
+  color: #1c1c1c;
+  font-size: 40px;
+  font-weight: 500;
+}
+.sectionSubTitle {
+  color: #507882;
+  font-weight: 500;
+  font-size: 14px;
+}
+.sectionDesc {
+  color: #808080;
+  font-size: 16px;
+  font-weight: 400;
+}
+.largeButton {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  background-color: #507882;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+}
+/** General Styles */
+.heroWrapper {
+  background: url(/images/hero_background_image.jpg) center no-repeat;
+  background-size: cover;
+}
+.heroContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.heroInfoContent {
+  max-width: 600px;
+}
+.heroSubTitle,
+.heroMainTitle {
+  font-family: "Prata", sans-serif;
+}
+.heroMainTitle {
+  font-size: 50px;
+  font-weight: normal;
+  color: #1c1c1c;
+}
+.heroSubTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #507882;
+}
+.heroDesc {
+  font-size: 16px;
+  color: #808080;
+  max-width: 500px;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+}
+
+/*? Who We Are */
+.whoWeAreWrapper {
+  background: radial-gradient(at center center, #ffffffcc 0%, #ffffff 75%), url(/images/who_we_are_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.whoWeAreContent {
+  max-width: 1280px;
+  margin: 5rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-left: 6rem;
+  padding-right: 0rem;
+  padding-bottom: 8rem;
+}
+.whoWeAreImgSide,
+.whoWeAreInfoSide {
+  width: 100%;
+}
+.whoWeAreImgSide {
+  position: relative;
+}
+.whoWeAreImgContent--front {
+  width: 100%;
+  position: absolute;
+  max-width: 400px;
+  bottom: -5rem;
+  left: -5rem;
+}
+.whoWeAreImg {
+  width: 100%;
+  object-fit: cover;
+}
+.sectionMainTitle {
+  line-height: 1.1em;
+}
+.whoWeAreIconRows {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.whoWeAreIconRow {
+  display: flex;
+  gap: 1rem;
+}
+.whoWeAreIconTitle {
+  font-family: "Prata", sans-serif;
+  color: #1c1c1c;
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 0.25rem;
+}
+.whoWeAreWrapper hr {
+  margin: 1rem 0;
+}
