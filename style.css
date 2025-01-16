@@ -8,7 +8,10 @@
 .heroWrapper,
 .whoWeAreWrapper,
 .videoWrapper,
-.whyChooseUsWrapper {
+.whyChooseUsWrapper,
+.whatWeOfferWrapper,
+.consultationWrapper,
+.howItWorksWrapper {
   font-family: "Inter", sans-serif;
 }
 .sectionSubTitle,
@@ -64,9 +67,13 @@
 .heroWrapper {
   background: url(/images/hero_background_image.jpg) center no-repeat;
   background-size: cover;
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .heroContent {
-  max-width: 1280px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -74,14 +81,16 @@
   padding: 1rem;
 }
 .heroInfoContent {
-  max-width: 600px;
+  max-width: 500px;
 }
 .heroSubTitle,
 .heroMainTitle {
   font-family: "Prata", sans-serif;
+  line-height: 1.1em;
+  margin-bottom: 0.5rem;
 }
 .heroMainTitle {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: normal;
   color: #1c1c1c;
 }
@@ -292,4 +301,196 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*? What We Offer */
+
+.whatWeOfferContent {
+  max-width: 1280px;
+  margin: 2rem auto;
+}
+.whatWeOfferWrapper .sectionSubTitle,
+.whatWeOfferWrapper .sectionMainTitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 0.5rem;
+}
+.whatWeOfferCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.whatWeOfferCard {
+  position: relative;
+  width: 365px;
+  height: 375px;
+  perspective: 1000px;
+  perspective: 1000;
+  transform: perspective(1000px);
+  transform-style: preserve-3d;
+  position: relative;
+  float: left;
+  margin: 20px;
+  border-radius: 10px;
+}
+.whatWeOfferCardImgContent {
+  max-width: 60px;
+  max-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.whatWeOfferCardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.whatWeOfferCard .sectionIconTitle,
+.whatWeOfferCard .sectionDesc {
+  text-align: center;
+}
+.whatWeOfferCard .sectionIconTitle {
+  color: #507882;
+}
+.whatWeOfferCard--front,
+.whatWeOfferCard--behind {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.whatWeOfferCard--front,
+.whatWeOfferCard--behind {
+  background-size: cover;
+  background-position: center center;
+  transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  backface-visibility: hidden;
+  background-color: #f5fbfb;
+}
+.whatWeOfferCard .whatWeOfferCard--front {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+.whatWeOfferCard:hover .whatWeOfferCard--front {
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+}
+.whatWeOfferCard--behind {
+  background-color: #e1eff0;
+}
+.whatWeOfferCard .whatWeOfferCard--behind,
+.whatWeOfferCard:hover .whatWeOfferCard--behind {
+  transform-style: preserve-3d;
+}
+.whatWeOfferCard .whatWeOfferCard--behind {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+.whatWeOfferCard:hover .whatWeOfferCard--behind {
+  transform: rotateY(0deg);
+}
+.whatWeOfferCard--frontInner,
+.whatWeOfferCard--behindInner {
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  transform-style: preserve-3d;
+  z-index: 2;
+}
+.whatWeOfferCard--frontInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%) translateX(0px) scale(1);
+}
+.whatWeOfferCard--behindInner {
+  transform: translateY(-50%) translateX(650px) translateZ(60px) scale(0.88);
+}
+.whatWeOfferCard:hover .whatWeOfferCard--frontInner,
+.whatWeOfferCard:hover .whatWeOfferCard--behindInner {
+  transform-style: preserve-3d;
+}
+.whatWeOfferCard:hover .whatWeOfferCard--frontInner {
+  transform: translateY(-50%) translateX(-650px) scale(0.88);
+}
+.whatWeOfferCard--behindInner .sectionIconTitle {
+  color: #1c1c1c;
+}
+.whatWeOfferCard:hover .whatWeOfferCard--behindInner {
+  transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
+}
+.whatWeOfferContent .largeButton {
+  font-size: 16px;
+}
+
+/*? Consultation Section */
+
+.consultationWrapper {
+  background: radial-gradient(at center center, rgba(80, 120, 130, 0.6) 0%, rgba(80, 120, 130, 0.6) 75%), url(/images/consultation_background_image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5em 1rem;
+}
+.howItWorksWrapper .sectionSubTitle,
+.howItWorksWrapper .sectionMainTitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 0.5rem;
+}
+
+/*? How it Works */
+.howItWorksWrapper {
+  background-color: #f5fbfb;
+}
+.howItWorksContent {
+  padding: 3rem 1rem;
+}
+.squareCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+.squareCard {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: #fff;
+}
+.squareCardBadge {
+  background-color: #e1eff0;
+  padding: 7px 21px 7px 21px;
+  border-radius: 5px 5px 5px 5px;
+  position: absolute;
+  top: -1rem;
+  font-family: "Prata", sans-serif;
+  font-size: 14px;
+  color: #507882;
+}
+.squareCard .largeButton {
+  font-size: 13px;
+  padding: 10px 20px;
+}
+.squareCard .sectionIconTitle,
+.squareCard .sectionDesc {
+  text-align: center;
 }

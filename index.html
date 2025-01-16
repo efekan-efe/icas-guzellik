@@ -21,7 +21,7 @@
           <a href="/" class="largeButton">Discover more</a>
         </div>
         <div class="heroImgContent">
-          <img width="600" height="600" src="/images/hero_image.png" alt="hero_image" class="heroImg" />
+          <img width="800" height="800" src="/images/hero_image.png" alt="hero_image" class="heroImg" />
         </div>
       </div>
     </section>
@@ -143,35 +143,68 @@
       </div>
     </section>
 
-    <script>
-      const playBtn = document.querySelector(".play-btn");
-      const overlay = document.getElementById("overlay");
-      const closeBtn = document.getElementById("closeBtn");
-      const videoFrame = document.getElementById("videoFrame");
+    <!-- What We Offer -->
 
-      // Show popup when play button is clicked
-      playBtn.addEventListener("click", () => {
-        overlay.style.display = "block";
-      });
+    <section class="whatWeOfferWrapper">
+      <div class="whatWeOfferContent">
+        <h3 class="sectionSubTitle">WHAT WE OFFER</h3>
+        <h2 class="sectionMainTitle">Smile with the reflection of the glow.</h2>
 
-      // Function to stop video
-      const stopVideo = () => {
-        videoFrame.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', "*");
-      };
+        <div class="whatWeOfferCards"></div>
+      </div>
+    </section>
 
-      // Close popup when X button is clicked
-      closeBtn.addEventListener("click", () => {
-        overlay.style.display = "none";
-        stopVideo();
-      });
+    <!-- Consultation Section -->
 
-      // Close popup when clicking outside the video
-      overlay.addEventListener("click", (event) => {
-        if (event.target === overlay) {
-          overlay.style.display = "none";
-          stopVideo();
-        }
-      });
-    </script>
+    <section class="consultationWrapper">
+      <div class="videoContent">
+        <div class="videoInfoContent">
+          <h2 class="sectionMainTitle">Get Free Consultation With Our Experts</h2>
+          <p class="sectionDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+          <a href="/" class="largeButton">Consult Now!</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+
+    <section class="howItWorksWrapper">
+      <div class="howItWorksContent">
+        <h3 class="sectionSubTitle">HOW IT WORKS</h3>
+        <h2 class="sectionMainTitle">Treat your skin with the best treatment.</h2>
+        <div class="squareCards">
+          <div class="squareCard">
+            <span class="squareCardBadge">STEP 1</span>
+            <div class="squareCardImgContent">
+              <img src="/images/ask_icon.png" alt="ask" class="squareCardImg" />
+            </div>
+            <h3 class="sectionIconTitle">Consultations</h3>
+            <p class="sectionDesc">Imperdiet class parturient nascetur dapibus facilisis iaculis eleifend in suspendisse lacus efficitur</p>
+            <a href="/" class="largeButton">Chat Now</a>
+          </div>
+          <div class="squareCard">
+            <span class="squareCardBadge">STEP 2</span>
+            <div class="squareCardImgContent">
+              <img src="/images/price_list_icon.png" alt="price_list" class="squareCardImg" />
+            </div>
+            <h3 class="sectionIconTitle">Choose Package</h3>
+            <p class="sectionDesc">Imperdiet class parturient nascetur dapibus facilisis iaculis eleifend in suspendisse lacus efficitur</p>
+            <a href="/" class="largeButton">Choose Package</a>
+          </div>
+          <div class="squareCard">
+            <span class="squareCardBadge">STEP 3</span>
+            <div class="squareCardImgContent">
+              <img src="/images/get_service_icon.png" alt="get_service" class="squareCardImg" />
+            </div>
+            <h3 class="sectionIconTitle">Get Service</h3>
+            <p class="sectionDesc">Imperdiet class parturient nascetur dapibus facilisis iaculis eleifend in suspendisse lacus efficitur</p>
+            <a href="/" class="largeButton">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/video.js"></script>
+    <script src="/offerCards.js"></script>
   </body>
 </html>
