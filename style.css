@@ -5,16 +5,7 @@
 }
 /** General Styles */
 
-.heroWrapper,
-.whoWeAreWrapper,
-.videoWrapper,
-.whyChooseUsWrapper,
-.whatWeOfferWrapper,
-.consultationWrapper,
-.howItWorksWrapper,
-.choosePackageWrapper,
-.assistantWrapper,
-.testimonialWrapper {
+section {
   font-family: "Inter", sans-serif;
 }
 .sectionSubTitle,
@@ -76,7 +67,7 @@
 .heroWrapper {
   background: url(/images/hero_background_image.jpg) center no-repeat;
   background-size: cover;
-  min-height: 95vh;
+  /* min-height: 95vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,6 +108,33 @@
 .heroImg {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 920px) {
+  .heroMainTitle {
+    font-size: 35px;
+  }
+  .heroDesc {
+    font-size: 14px;
+  }
+  .largeButton {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .heroContent {
+    flex-direction: column;
+    padding: 2rem;
+    padding-bottom: 0rem;
+  }
+  .heroImgContent {
+    max-width: 400px;
+  }
+  .heroMainTitle {
+    font-size: 30px;
+  }
 }
 
 /*? Who We Are */
@@ -614,4 +632,112 @@
 }
 .splide__arrow svg {
   fill: #507882;
+}
+
+/*? Support */
+
+.supportWrapper {
+  background: radial-gradient(at center center, rgba(80, 120, 130, 0.6) 0%, rgba(80, 120, 130, 0.6) 75%), url(/images/support_background_image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 1rem 0;
+  position: relative;
+  margin-bottom: 10rem;
+}
+.supportWrapper .sectionMainTitle,
+.supportWrapper .sectionDesc {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 0.5rem;
+  color: #fff;
+  transform: translateY(1rem);
+}
+.supportWrapper .squareCard .sectionDesc {
+  color: #808080;
+}
+.supportWrapper .squareCards {
+  transform: translateY(3rem);
+}
+.supportWrapper .squareCard {
+  padding: 2rem;
+  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.1);
+}
+.supportWrapper .largeButton {
+  padding: 10px 30px;
+}
+
+/*? Informative */
+
+.informativeWrapper .largeButton {
+  padding: 10px 30px;
+}
+.informativeContent {
+  max-width: 1280px;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.informativeInfoSide {
+  padding: 3rem 6rem 3rem 1rem;
+}
+.informativeImg {
+  object-fit: cover;
+}
+.informativeImgSide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.informativeImg--left {
+  transform: translateY(-1rem);
+}
+.informativeImg--right {
+  transform: translateY(1rem);
+}
+.informativeWrapper .whyChooseUsTagBox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: unset;
+  left: unset;
+  max-width: 200px;
+  max-height: 130px;
+}
+
+/*? Contact Form */
+.contactFormWrapper {
+  background-color: #e1eff0;
+}
+.contactFormContent {
+  max-width: 600px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.contactFormWrapper .sectionMainTitle,
+.contactFormWrapper .sectionSubTitle,
+.contactFormWrapper .sectionDesc {
+  text-align: left;
+  max-width: 600px;
+  margin-right: auto;
+}
+.contactFormWrapper .sectionIconRow {
+  align-items: center;
+}
+.contactFormWrapper .sectionIconContent {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  max-width: 84px;
+  max-height: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
