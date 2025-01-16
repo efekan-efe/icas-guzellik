@@ -13,7 +13,8 @@
 .consultationWrapper,
 .howItWorksWrapper,
 .choosePackageWrapper,
-.assistantWrapper {
+.assistantWrapper,
+.testimonialWrapper {
   font-family: "Inter", sans-serif;
 }
 .sectionSubTitle,
@@ -554,4 +555,63 @@
   text-align: center;
   max-width: 600px;
   margin: 0 auto 0.75rem;
+}
+
+/*? Testimonials */
+
+.testimonialWrapper {
+  background: radial-gradient(at center center, #e1eff0cc 0%, #ffffff 75%), url(/images/testimonial_background_image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5em 1rem;
+}
+.testimonialWrapper .sectionSubTitle,
+.testimonialWrapper .sectionMainTitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 0.75rem;
+}
+.testimonialCard {
+  max-width: 590px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testimonialCardComment {
+  color: #808080;
+  font-size: 1.3rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.testimonialCardImg {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.testimonialCardPersonName {
+  color: #507882;
+  font-size: 16px;
+}
+.testimonialCardPersonJob {
+  color: #1c1c1c;
+  font-size: 13px;
+}
+.splide__pagination {
+  bottom: -3rem;
+}
+.splide__pagination__page {
+  background-color: #e1eff0;
+  width: 12px;
+  height: 12px;
+}
+.splide__pagination__page.is-active {
+  background-color: #507882;
+}
+.splide__arrow {
+  background-color: transparent;
+}
+.splide__arrow svg {
+  fill: #507882;
 }

@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prata&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/style.css" />
     <title>İcas Güzellik Salonu</title>
   </head>
@@ -264,10 +265,59 @@
       <div class="testimonialContent">
         <h3 class="sectionSubTitle">TESTIMONIAL</h3>
         <h2 class="sectionMainTitle">What they say about us</h2>
+        <div class="splide testimonialSlider" role="group" aria-label="Testimonial">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="testimonialCard">
+                  <p class="testimonialCardComment">Purus erat sapien adipiscing tincidunt quisque risus pede. Sodales eu faucibus purus in interdum maximus. Hendrerit natoque hac facilisis convallis sem ad.</p>
+                  <div class="testimonialCardImgContent">
+                    <img width="50" height="50" src="images/testimonial_1.jpg" alt="testimonial_1" class="testimonialCardImg" />
+                  </div>
+
+                  <h4 class="testimonialCardPersonName">Scarlett Wyatt</h4>
+                  <p class="testimonialCardPersonJob">Beauty Vlogger</p>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="testimonialCard">
+                  <p class="testimonialCardComment">Purus erat sapien adipiscing tincidunt quisque risus pede. Sodales eu faucibus purus in interdum maximus. Hendrerit natoque hac facilisis convallis sem ad.</p>
+                  <div class="testimonialCardImgContent">
+                    <img width="50" height="50" src="images/testimonial_2.jpg" alt="testimonial_2" class="testimonialCardImg" />
+                  </div>
+
+                  <h4 class="testimonialCardPersonName">Claudia Perry</h4>
+                  <p class="testimonialCardPersonJob">Business Manager</p>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="testimonialCard">
+                  <p class="testimonialCardComment">Purus erat sapien adipiscing tincidunt quisque risus pede. Sodales eu faucibus purus in interdum maximus. Hendrerit natoque hac facilisis convallis sem ad.</p>
+                  <div class="testimonialCardImgContent">
+                    <img width="50" height="50" src="images/testimonial_3.jpg" alt="testimonial_3" class="testimonialCardImg" />
+                  </div>
+
+                  <h4 class="testimonialCardPersonName">Georgia Brown</h4>
+                  <p class="testimonialCardPersonJob">Vlogger</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <script src="/video.js"></script>
     <script src="/offerCards.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+      var testimonialSlider = new Splide(".testimonialSlider", {
+        type: "loop",
+        perPage: 1,
+        perMove: 1,
+      });
+
+      testimonialSlider.mount();
+    </script>
   </body>
 </html>
