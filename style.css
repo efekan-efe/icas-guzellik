@@ -11,7 +11,9 @@
 .whyChooseUsWrapper,
 .whatWeOfferWrapper,
 .consultationWrapper,
-.howItWorksWrapper {
+.howItWorksWrapper,
+.choosePackageWrapper,
+.assistantWrapper {
   font-family: "Inter", sans-serif;
 }
 .sectionSubTitle,
@@ -44,6 +46,12 @@
   text-decoration: none;
   padding: 1rem 2rem;
   margin-top: 1rem;
+}
+.largeButton.empty {
+  background-color: #fff;
+  color: #507882;
+  border: 2px solid #507882;
+  padding: 10px 30px;
 }
 
 .sectionIconRows {
@@ -486,11 +494,64 @@
   font-size: 14px;
   color: #507882;
 }
-.squareCard .largeButton {
+.howItWorksWrapper .largeButton {
   font-size: 13px;
   padding: 10px 20px;
 }
 .squareCard .sectionIconTitle,
 .squareCard .sectionDesc {
   text-align: center;
+}
+
+/*? Choose Package */
+
+.choosePackageContent {
+  max-width: 1280px;
+  margin: 2rem auto;
+}
+.choosePackageWrapper .sectionSubTitle,
+.choosePackageWrapper .sectionMainTitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 0.5rem;
+}
+.choosePackageWrapper .squareCard {
+  min-width: 400px;
+  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.1);
+}
+.choosePackageWrapper .sectionIconTitle {
+  font-size: 25px;
+  margin-bottom: 2rem;
+}
+.squareCardList {
+  list-style: none;
+  padding: 0;
+}
+.squareCardListItem {
+  text-align: center;
+  color: #808080;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e1eff0;
+}
+.choosePackageWrapper .largeButton {
+  border: 2px solid #507882;
+  padding: 10px 30px;
+}
+
+/*? Assistant Section */
+
+.assistantContent {
+  max-width: 1280px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.assistantWrapper .sectionMainTitle,
+.assistantWrapper .sectionDesc {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 0.75rem;
 }
